@@ -331,3 +331,66 @@ html, body {
     line-height: 30px;
     font-weight: 500;
 }
+
+/* 手机端样式 */
+@media screen and (max-width: 600px) {
+    .game-container .short-description p {
+        font-size: 14px;
+    }
+
+    .description-container {
+        margin: 115px auto 0;
+        gap: 0;
+    }
+
+    .description-container .section {
+        margin: 25px;
+        padding: 30px;
+    }
+
+    .description-container .section h1 {
+        font-size: 25px;
+    }
+
+    .description-container .section h2 {
+        font-size: 22px;
+    }
+
+    .description-container .section p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .one .grid .container {
+        flex-basis: 100%;
+    }
+
+    .one .grid .container a {
+        font-size: 14px;
+    }
+
+    .three ul li, .four ul li,.six ul li {
+        flex-basis: 100%;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .seven .img .img-container {
+        flex-basis: 100%;
+    }
+
+    .eight .faq-container {
+        padding: 30px 0;
+        border-bottom: 1px solid #ffffee26;
+    }
+
+    .eight h3 {
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .eight p {
+        line-height: 28px !important;
+        font-size: 14px !important;
+    }
+}
