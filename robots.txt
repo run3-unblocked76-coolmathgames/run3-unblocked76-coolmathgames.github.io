@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://run3-unblocked76-coolmathgames.github.io/sitemap.xml
