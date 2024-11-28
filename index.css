@@ -26,18 +26,27 @@ html, body {
     width: 100%;
     background: rgba(0, 0, 0, 0.74);
     z-index: 10;
+    text-align: center;
+    padding: 10px;
 }
 
 .game-container .short-description p {
     margin: 0;
-    padding: 10px 10px;
     color: #ffffff;
     text-align: center;
     font-size: 15px;
     line-height: 28px;
+    display: inline-block;
 }
 
-.game-container .short-description p a {
+.game-container .short-description h1 {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 28px;
+    display: inline;
+}
+
+.game-container .short-description h1 a {
     color: #ed4441;
     font-weight: 700;
     text-decoration: none;
@@ -334,8 +343,13 @@ html, body {
 
 /* 手机端样式 */
 @media screen and (max-width: 600px) {
+    .game-container .short-description {
+        width: 93%;
+    }
+
     .game-container .short-description p {
         font-size: 14px;
+        display: contents;
     }
 
     .description-container {
