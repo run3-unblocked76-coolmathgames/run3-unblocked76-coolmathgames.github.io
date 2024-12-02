@@ -54,6 +54,7 @@ html, body {
 
 .game-container .short-description a {
     color: #ed4441;
+    text-decoration: none;
 }
 
 .description-container {
