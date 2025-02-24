@@ -493,7 +493,7 @@ const gamesData = [
     },
     {
         title: "Sprunki Phase 100",
-        image: "static/images/Sprunki-Phase-100.jpg",
+        image: "static/images/Sprunki Phase 100.jpg",
         link: "https://sprunkiphase100.com/",
         alt: "Sprunki Phase 100"
     },
