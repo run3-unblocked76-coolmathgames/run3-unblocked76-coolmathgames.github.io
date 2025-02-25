@@ -675,10 +675,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleAccordion(header) {
     const content = header.nextElementSibling;
     const isCollapsed = content.classList.contains('collapsed');
-    
+
     // 切换箭头状态
     header.classList.toggle('active');
-    
+
     // 切换内容显示状态
     if (isCollapsed) {
         content.classList.remove('collapsed');
@@ -713,9 +713,59 @@ function generateGameHTML(game) {
     `;
 }
 
-// 初始化页面
+// 默认排序
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('games-container');
     const gamesHTML = gamesData.map(generateGameHTML).join('');
     container.insertAdjacentHTML('beforeend', gamesHTML);
 });
+
+// 按照游戏名称进行排序
+// document.addEventListener('DOMContentLoaded', function() {
+//     const container = document.getElementById('games-container');
+//
+//     const sortedGames = gamesData.sort((a, b) => {
+//         if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+//         if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+//         return 0;
+//     });
+//
+//     const gamesHTML = sortedGames.map(generateGameHTML).join('');
+//     container.insertAdjacentHTML('beforeend', gamesHTML);
+// });
+
+// 指定要排到前面的游戏标题
+// document.addEventListener('DOMContentLoaded', function() {
+//     const container = document.getElementById('games-container');
+//
+//     const gamesToMoveFront = [
+//         "Rocket Soccer Derby",
+//         "Multiplication Duck",
+//         "Pokemon Emerald Rogue"
+//     ];
+//
+//     const frontGames = gamesData.filter(game => gamesToMoveFront.includes(game.title));
+//     const otherGames = gamesData.filter(game => !gamesToMoveFront.includes(game.title));
+//     const sortedGames = [...frontGames, ...otherGames];
+//
+//     const gamesHTML = sortedGames.map(generateGameHTML).join('');
+//     container.insertAdjacentHTML('beforeend', gamesHTML);
+// });
+
+// 按照标题中是否包含 "Sprunki" 进行排序
+// document.addEventListener('DOMContentLoaded', function() {
+//     const container = document.getElementById('games-container');
+//
+//     const sortedGames = gamesData.sort((a, b) => {
+//         const aContainsSprunki = a.title.toLowerCase().includes("sprunki");
+//         const bContainsSprunki = b.title.toLowerCase().includes("sprunki");
+//
+//         if (aContainsSprunki && !bContainsSprunki) return -1;
+//         if (!aContainsSprunki && bContainsSprunki) return 1;
+//
+//         return 0;
+//     });
+//
+//     const gamesHTML = sortedGames.map(generateGameHTML).join('');
+//     container.insertAdjacentHTML('beforeend', gamesHTML);
+// });
